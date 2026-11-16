@@ -26,6 +26,17 @@ export const content = {
       langShort: 'ES',
       langTitle: 'Leer en español',
       filterLabel: 'Filter projects',
+      art: {
+        a: 'CanSat · simulated telemetry',
+        b: 'Mission clock · simulated',
+        c: 'Ortholinear, 40 keys, zero merge conflicts',
+        alt: 'ALT', vel: 'VEL', temp: 'TEMP', pkt: 'PKT',
+        landed: 'LANDED',
+        descending: 'DESCENT',
+        clock: 'T+',
+        orbit: 'ORBIT',
+        signal: 'SIGNAL',
+      },
       repo: 'repo',
       repos: 'repos',
       fork: 'fork',
@@ -34,6 +45,7 @@ export const content = {
       { id: 'work', label: 'Work' },
       { id: 'projects', label: 'Projects' },
       { id: 'keyboards', label: 'Keyboards' },
+      { id: 'lessons', label: 'Lessons' },
       { id: 'teaching', label: 'Teaching' },
       { id: 'contact', label: 'Contact' },
     ],
@@ -251,6 +263,38 @@ export const content = {
       keycapsLabel: 'Try typing it',
       keycapsWord: 'LUMBERJACK',
     },
+    lessons: {
+      label: '## lessons',
+      title: 'Lessons learned',
+      intro: 'Two lessons I learned the hard way, so you can skip the hard part. Or at least nod knowingly.',
+      rulesLabel: 'Rules I keep now',
+      items: [
+        {
+          num: '01',
+          title: 'Start simple. Stay native. Earn the framework.',
+          story:
+            'More than once I reached for the big framework before the problem had earned it, and paid for it in setup, upgrades and onboarding. Complexity is a loan, and the interest shows up in every sprint. Over-engineering feels like diligence while you are doing it.',
+          rules: [
+            'Start with what the platform already gives you: plain SQL, the standard library, native browser APIs, a script and a scheduler.',
+            'Prove the value with the simple version first. Add a framework only when a specific, measurable pain asks for it.',
+            'If a feature needs a diagram to justify its existence, ask whether it needs to exist.',
+          ],
+          proof: ['$ ls node_modules', "ls: cannot access 'node_modules': No such file or directory", '# this site, on purpose'],
+        },
+        {
+          num: '02',
+          title: 'If it is not documented, it does not exist.',
+          story:
+            'The most frequent victim of my undocumented decisions is future me, who opens a file and asks who wrote this. Knowledge that lives in one head is a single point of failure, and that head also takes vacations.',
+          rules: [
+            'Write down the why, not only the how: the decision, the trade-offs and what was rejected.',
+            'Keep docs next to the code (README, decision records, runbooks) so they change in the same pull request.',
+            'A task is done when someone else can run it without asking me.',
+          ],
+          proof: ['$ git blame', 'future-me: who wrote this?', 'git: you did.'],
+        },
+      ],
+    },
     teaching: {
       label: '## teaching',
       title: 'Teaching and community',
@@ -316,6 +360,17 @@ export const content = {
       langShort: 'EN',
       langTitle: 'Read in English',
       filterLabel: 'Filtrar proyectos',
+      art: {
+        a: 'CanSat · telemetría simulada',
+        b: 'Reloj de misión · simulado',
+        c: 'Ortolineal, 40 teclas, cero conflictos de merge',
+        alt: 'ALT', vel: 'VEL', temp: 'TEMP', pkt: 'PKT',
+        landed: 'ATERRIZADO',
+        descending: 'DESCENSO',
+        clock: 'T+',
+        orbit: 'ÓRBITA',
+        signal: 'SEÑAL',
+      },
       repo: 'repo',
       repos: 'repos',
       fork: 'fork',
@@ -324,6 +379,7 @@ export const content = {
       { id: 'work', label: 'Casos' },
       { id: 'projects', label: 'Proyectos' },
       { id: 'keyboards', label: 'Teclados' },
+      { id: 'lessons', label: 'Lecciones' },
       { id: 'teaching', label: 'Enseñanza' },
       { id: 'contact', label: 'Contacto' },
     ],
@@ -541,6 +597,38 @@ export const content = {
       aside: 'En mi GitHub también hay un fork del firmware QMK, porque claro que sí.',
       keycapsLabel: 'Pruébalo: escríbelo',
       keycapsWord: 'LUMBERJACK',
+    },
+    lessons: {
+      label: '## lecciones',
+      title: 'Lecciones aprendidas',
+      intro: 'Dos lecciones que aprendí por las malas, para que tú te saltes lo difícil. O al menos asientas con conocimiento de causa.',
+      rulesLabel: 'Reglas que sigo ahora',
+      items: [
+        {
+          num: '01',
+          title: 'Empieza simple. Usa lo nativo. Gánate el framework.',
+          story:
+            'Más de una vez recurrí al framework grande antes de que el problema se lo ganara, y lo pagué en configuración, actualizaciones y onboarding. La complejidad es un préstamo, y los intereses aparecen en cada sprint. La sobreingeniería se siente como diligencia mientras la haces.',
+          rules: [
+            'Empieza con lo que la plataforma ya te da: SQL simple, la biblioteca estándar, APIs nativas del navegador, un script y un scheduler.',
+            'Demuestra el valor con la versión simple primero. Agrega un framework solo cuando un dolor específico y medible lo pida.',
+            'Si una funcionalidad necesita un diagrama para justificar su existencia, pregunta si necesita existir.',
+          ],
+          proof: ['$ ls node_modules', "ls: cannot access 'node_modules': No such file or directory", '# este sitio, a propósito'],
+        },
+        {
+          num: '02',
+          title: 'Si no está documentado, no existe.',
+          story:
+            'La víctima más frecuente de mis decisiones sin documentar es mi yo del futuro, que abre un archivo y pregunta quién escribió esto. El conocimiento que vive en una sola cabeza es un punto único de falla, y esa cabeza además se va de vacaciones.',
+          rules: [
+            'Escribe el porqué, no solo el cómo: la decisión, los trade-offs y lo que se descartó.',
+            'Mantén la documentación junto al código (README, registros de decisiones, runbooks) para que cambie en el mismo pull request.',
+            'Una tarea está terminada cuando otra persona puede ejecutarla sin preguntarme.',
+          ],
+          proof: ['$ git blame', 'yo-del-futuro: ¿quién escribió esto?', 'git: tú.'],
+        },
+      ],
     },
     teaching: {
       label: '## enseñanza',
