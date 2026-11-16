@@ -327,7 +327,10 @@ export const content = {
         { name: 'ML & AI', items: ['MLflow', 'XGBoost', 'Prophet', 'Azure OpenAI', 'Gemini', 'MCP', 'GitHub Copilot', 'Claude Code'] },
         { name: 'Backend', items: ['FastAPI', 'Spring Boot', 'Flask', 'Django', 'Looker'] },
       ],
-      certs: ['Google Cloud Associate Cloud Engineer', 'Google Gemini Certified Partner Specialist: Gemini Enterprise Agent Development'],
+      certs: [
+        { name: 'Google Cloud Associate Cloud Engineer' },
+        { name: 'Google Gemini Certified Partner Specialist: Gemini Enterprise Agent Development', href: 'https://www.credly.com/badges/3b1ee0af-36d6-4301-afb7-e523a8664338' },
+      ],
       certsLabel: 'Certifications',
       credlyLabel: 'Verify all my badges on Credly',
     },
@@ -665,7 +668,10 @@ export const content = {
         { name: 'ML e IA', items: ['MLflow', 'XGBoost', 'Prophet', 'Azure OpenAI', 'Gemini', 'MCP', 'GitHub Copilot', 'Claude Code'] },
         { name: 'Backend', items: ['FastAPI', 'Spring Boot', 'Flask', 'Django', 'Looker'] },
       ],
-      certs: ['Google Cloud Associate Cloud Engineer', 'Google Gemini Certified Partner Specialist: Gemini Enterprise Agent Development'],
+      certs: [
+        { name: 'Google Cloud Associate Cloud Engineer' },
+        { name: 'Google Gemini Certified Partner Specialist: Gemini Enterprise Agent Development', href: 'https://www.credly.com/badges/3b1ee0af-36d6-4301-afb7-e523a8664338' },
+      ],
       certsLabel: 'Certificaciones',
       credlyLabel: 'Verifica todas mis insignias en Credly',
     },

@@ -261,7 +261,7 @@ function stack(key) {
     </header>
     <div class="stack">
       ${s.groups.map((g) => `<div class="stack-row"><h3 class="mono">${esc(g.name)}</h3>${li(g.items)}</div>`).join('\n      ')}
-      <div class="stack-row"><h3 class="mono">${esc(s.certsLabel)}</h3><div class="certs-col"><ul class="chips certs">${s.certs.map((i) => `<li><a href="${esc(site.credly)}" target="_blank" rel="noopener noreferrer">${esc(i)}</a></li>`).join('')}</ul><p class="links mono"><a href="${esc(site.credly)}" target="_blank" rel="noopener noreferrer">${esc(s.credlyLabel)}<span aria-hidden="true"> ↗</span></a></p></div></div>
+      <div class="stack-row"><h3 class="mono">${esc(s.certsLabel)}</h3><div class="certs-col"><ul class="chips certs">${s.certs.map((i) => `<li><a href="${esc(i.href || site.credly)}" target="_blank" rel="noopener noreferrer">${esc(i.name)}</a></li>`).join('')}</ul><p class="links mono"><a href="${esc(site.credly)}" target="_blank" rel="noopener noreferrer">${esc(s.credlyLabel)}<span aria-hidden="true"> ↗</span></a></p></div></div>
     </div>
     </div>
   </section>`;
