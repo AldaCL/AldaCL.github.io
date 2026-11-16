@@ -16,12 +16,6 @@
     });
   }
 
-  // Remember an explicit language choice so the root page stops auto-redirecting
-  var langLink = document.querySelector('.lang');
-  if (langLink) {
-    langLink.addEventListener('click', function () { store.set('lang', langLink.getAttribute('data-lang')); });
-  }
-
   // Project filters (progressive enhancement: without JS every project shows)
   var filters = document.querySelector('.filters');
   if (filters) {

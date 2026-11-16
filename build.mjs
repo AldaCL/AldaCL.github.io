@@ -32,10 +32,6 @@ function head(key) {
   const c = content[key];
   const other = key === 'en' ? 'es' : 'en';
   const r = rel(key);
-  const redirect =
-    key === 'en'
-      ? `<script>try{var s=localStorage.getItem('lang');var n=(navigator.languages&&navigator.languages[0])||navigator.language||'';if(!s&&/^es/i.test(n)&&!location.hash){location.replace('es/');}}catch(e){}</script>`
-      : '';
   return `<!doctype html>
 <html lang="${c.htmlLang}" data-theme="dark">
 <head>
@@ -57,7 +53,6 @@ function head(key) {
 <meta name="color-scheme" content="dark light">
 <link rel="icon" href="${r.assets}favicon.svg" type="image/svg+xml">
 <script>(function(){try{var t=localStorage.getItem('theme');if(!t){t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';}document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
-${redirect}
 <link rel="stylesheet" href="${r.assets}styles.css">
 <script type="application/ld+json">${jsonLd(c)}</script>
 </head>`;
