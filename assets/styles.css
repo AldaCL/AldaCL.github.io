@@ -253,6 +253,11 @@ h3 { margin: 0; font-size: 1.15rem; letter-spacing: -0.01em; line-height: 1.3; }
   padding: 3px 9px; border-radius: 6px;
 }
 .chips.certs li { color: var(--fg); background: transparent; border-color: var(--line); }
+.chips.certs a { text-decoration: none; color: inherit; }
+.chips.certs li:hover { border-color: var(--accent); }
+.chips.certs li:hover a { color: var(--accent); }
+.certs-col { display: grid; gap: 10px; }
+.certs-col .links { margin: 0; padding: 0; }
 
 .project p:not(.note):not(.links) { color: var(--muted); font-size: 0.97rem; }
 .note { font-size: 0.78rem; color: var(--muted); }

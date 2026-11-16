@@ -24,7 +24,7 @@ function jsonLd(c) {
     name: site.name,
     url: site.url + c.path,
     jobTitle: c.hero.role,
-    sameAs: [site.github, site.linkedin],
+    sameAs: [site.github, site.linkedin, site.credly],
     knowsAbout: ['Data engineering', 'MLOps', 'Databricks', 'Google Cloud', 'Azure', 'Python', 'Data governance'],
   });
 }
@@ -261,7 +261,7 @@ function stack(key) {
     </header>
     <div class="stack">
       ${s.groups.map((g) => `<div class="stack-row"><h3 class="mono">${esc(g.name)}</h3>${li(g.items)}</div>`).join('\n      ')}
-      <div class="stack-row"><h3 class="mono">${esc(s.certsLabel)}</h3>${li(s.certs, 'certs')}</div>
+      <div class="stack-row"><h3 class="mono">${esc(s.certsLabel)}</h3><div class="certs-col"><ul class="chips certs">${s.certs.map((i) => `<li><a href="${esc(site.credly)}" target="_blank" rel="noopener noreferrer">${esc(i)}</a></li>`).join('')}</ul><p class="links mono"><a href="${esc(site.credly)}" target="_blank" rel="noopener noreferrer">${esc(s.credlyLabel)}<span aria-hidden="true"> ↗</span></a></p></div></div>
     </div>
     </div>
   </section>`;

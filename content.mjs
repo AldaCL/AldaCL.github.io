@@ -8,6 +8,7 @@ export const site = {
   email: 'aldair.alda27@gmail.com',
   github: 'https://github.com/AldaCL',
   linkedin: 'https://linkedin.com/in/aldacortes',
+  credly: 'https://www.credly.com/users/aldair-cortes/badges',
 };
 
 const repo = (name) => `https://github.com/AldaCL/${name}`;
@@ -328,6 +329,7 @@ export const content = {
       ],
       certs: ['Google Cloud Associate Cloud Engineer', 'Google Gemini Certified Partner Specialist: Gemini Enterprise Agent Development'],
       certsLabel: 'Certifications',
+      credlyLabel: 'Verify all my badges on Credly',
     },
     contact: {
       label: '## contact',
@@ -665,6 +667,7 @@ export const content = {
       ],
       certs: ['Google Cloud Associate Cloud Engineer', 'Google Gemini Certified Partner Specialist: Gemini Enterprise Agent Development'],
       certsLabel: 'Certificaciones',
+      credlyLabel: 'Verifica todas mis insignias en Credly',
     },
     contact: {
       label: '## contacto',
