@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="es" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aldair Cortés — Ingeniero de plataformas de datos y ML</title>
+<meta name="description" content="Ingeniero de plataformas de datos y ML. Líder técnico de 30 ingenieros. Construyo pipelines de datos y sistemas de ML en GCP, Azure y Databricks, y enseño gobierno de datos, SQL y Python.">
+<link rel="canonical" href="https://aldacl.github.io/es/">
+<link rel="alternate" hreflang="en" href="https://aldacl.github.io/">
+<link rel="alternate" hreflang="es" href="https://aldacl.github.io/es/">
+<link rel="alternate" hreflang="x-default" href="https://aldacl.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Aldair Cortés — Ingeniero de plataformas de datos y ML">
+<meta property="og:description" content="Ingeniero de plataformas de datos y ML. Líder técnico de 30 ingenieros. Construyo pipelines de datos y sistemas de ML en GCP, Azure y Databricks, y enseño gobierno de datos, SQL y Python.">
+<meta property="og:url" content="https://aldacl.github.io/es/">
+<meta property="og:locale" content="es_MX">
+<meta property="og:locale:alternate" content="en_US">
+<meta name="twitter:card" content="summary">
+<meta name="color-scheme" content="dark light">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<script>(function(){try{var t=localStorage.getItem('theme');if(!t){t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';}document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+
+<link rel="stylesheet" href="../assets/styles.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Aldair Cortés","url":"https://aldacl.github.io/es/","jobTitle":"Ingeniero de plataformas de datos y ML","sameAs":["https://github.com/AldaCL","https://linkedin.com/in/aldacortes"],"knowsAbout":["Data engineering","MLOps","Databricks","Google Cloud","Azure","Python","Data governance"]}</script>
+</head>
+<body>
+<a class="skip" href="#main">Saltar al contenido</a>
+<header class="site-header">
+  <div class="wrap bar">
+    <a class="brand" href="#top" aria-label="Aldair Cortés"><span class="brand-path">~/</span>alda<span class="cursor" aria-hidden="true">_</span></a>
+    <nav class="nav" aria-label="Main">
+      <a href="#work">Casos</a>
+      <a href="#projects">Proyectos</a>
+      <a href="#keyboards">Teclados</a>
+      <a href="#teaching">Enseñanza</a>
+      <a href="#contact">Contacto</a>
+    </nav>
+    <div class="controls">
+      <a class="btn-ghost lang" href="../" hreflang="en" lang="en" data-lang="en" title="Read in English">EN</a>
+      <button class="btn-ghost theme" type="button" aria-label="Cambiar entre tema claro y oscuro" title="Cambiar entre tema claro y oscuro">
+        <svg class="i-sun" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <svg class="i-moon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+<main id="main">
+<section class="hero" id="top">
+  <div class="wrap">
+    <p class="kicker mono">$ whoami</p>
+    <h1>Aldair Cortés</h1>
+    <p class="role mono">Ingeniero de plataformas de datos y ML</p>
+    <p class="lead">Llevo datos y modelos a producción, y me aseguro de que se queden ahí.</p>
+    <p class="sub">Líder técnico de 30 ingenieros en EPAM NEORIS, dentro del equipo de Global Data Science de CEMEX. Antes: una Customer Data Platform desde cero en Liverpool y sistemas geoespaciales a escala nacional en el IFT.</p>
+    <div class="cta">
+      <a class="btn primary" href="#work">Ver mi trabajo</a>
+      <a class="btn" href="#contact">Saludar</a>
+    </div>
+    <p class="status mono"><span class="dot" aria-hidden="true"></span>Desde México · trabajo en español e inglés</p>
+    <div class="stats">
+      <div class="stat"><strong>6+</strong><span>años operando sistemas de datos en producción</span></div>
+      <div class="stat"><strong>30</strong><span>ingenieros liderados en 3 verticales</span></div>
+      <div class="stat"><strong>75%</strong><span>menos costo en Cloud SQL</span></div>
+      <div class="stat"><strong>67%</strong><span>despliegues de ML más rápidos</span></div>
+    </div>
+  </div>
+</section>
+<section class="section" id="work" aria-labelledby="work-title">
+    <div class="wrap">
+    <header class="section-head">
+      <p class="label mono">## casos</p>
+      <h2 id="work-title">Casos de estudio</h2>
+      <p class="intro">Sistemas reales, contados sin las partes confidenciales. Los logs se quedan donde están.</p>
+    </header>
+    <div class="grid cases">
+      <article class="card case">
+        <header><h3>Una plataforma de ML en Databricks</h3><p class="meta mono">CEMEX Global Data Science · 2022 – hoy</p></header>
+        <dl>
+          <dt>Problema</dt><dd>Los modelos se desplegaban a mano, cerca de una hora cada uno, y cada modelo tenía su propio endpoint.</dd>
+          <dt>Qué hice</dt><dd>Diseñé un estándar de ciclo de vida de ML en Databricks: CI/CD automatizado, pipelines con MLflow, despliegues que se actualizan solos y monitoreo de infraestructura y de drift del modelo. Lo desplegué en 4 proyectos productivos.</dd>
+          <dt>Resultados</dt>
+          <dd><ul class="results"><li>67% más rápido: 60 minutos de trabajo manual pasaron a un pipeline automático de 20.</li><li>70% menos costo de inferencia al enrutar un solo endpoint hacia el modelo que cada petición necesita.</li><li>Monitoreo de infraestructura y de desempeño de modelos en los 4 proyectos.</li></ul></dd>
+        </dl>
+        <ul class="chips "><li>Databricks</li><li>MLflow</li><li>PySpark</li><li>Asset Bundles</li><li>Lakeflow</li><li>CI/CD</li></ul>
+      </article>
+      <article class="card case">
+        <header><h3>Una Customer Data Platform desde cero</h3><p class="meta mono">El Puerto de Liverpool · 2022</p></header>
+        <dl>
+          <dt>Problema</dt><dd>Una cadena de tiendas necesitaba su primera Customer Data Platform en producción, construida desde cero.</dd>
+          <dt>Qué hice</dt><dd>Lideré el lanzamiento: 4 microservicios en Java/Spring Boot, una capa de acceso a datos y pipelines batch y streaming en GCP, aprovisionados con Terraform. La ingesta en tiempo real corría sobre Pub/Sub, Cloud Functions hacía el match de datos y Cloud Run ejecutaba los pipelines que desplegaban las actualizaciones.</dd>
+          <dt>Resultados</dt>
+          <dd><ul class="results"><li>75% menos costo en Cloud SQL (de 60 a 6 vCPUs) afinando consultas, procedimientos almacenados y código de Apache Beam.</li><li>Observabilidad de servicios, pipelines y bases de datos que redujo el tiempo para detectar problemas de desempeño.</li><li>Dashboards de Looker casi en tiempo real con ventas diarias y volumen de tickets a nivel nacional.</li></ul></dd>
+        </dl>
+        <ul class="chips "><li>GCP</li><li>BigQuery</li><li>Dataflow</li><li>Pub/Sub</li><li>Cloud Run</li><li>Terraform</li><li>Java</li></ul>
+      </article>
+      <article class="card case">
+        <header><h3>De R a Python, en cuatro países</h3><p class="meta mono">CEMEX · servicios de cadena de suministro</p></header>
+        <dl>
+          <dt>Problema</dt><dd>Cinco servicios críticos de cadena de suministro escritos en R tenían que convertirse en software de producción mantenible.</dd>
+          <dt>Qué hice</dt><dd>Lideré la migración a Python y FastAPI, con despliegue y monitoreo en Azure en EE. UU., México, Colombia y Reino Unido. También fui responsable del algoritmo de despacho detrás de la logística de entrega de concreto.</dd>
+          <dt>Resultados</dt>
+          <dd><ul class="results"><li>50% de mejora en tiempo de respuesta de los servicios migrados.</li><li>El despacho responde en menos de 5 segundos, con menos validaciones manuales y visibilidad de inventario en tiempo real.</li><li>Migré DAGs de Airflow de Cloud Composer 1 a 2.</li></ul></dd>
+        </dl>
+        <ul class="chips "><li>Python</li><li>FastAPI</li><li>Azure</li><li>Airflow</li><li>Cloud Composer</li></ul>
+      </article>
+      <article class="card case">
+        <header><h3>Estándares de ingeniería, humanos y de IA</h3><p class="meta mono">Liderazgo técnico · 30 ingenieros</p></header>
+        <dl>
+          <dt>Problema</dt><dd>El trabajo de ciencia de datos necesitaba el mismo rigor que el software, y los asistentes de IA también necesitaban reglas.</dd>
+          <dt>Qué hice</dt><dd>Lideré el Testing Learning Path, definí estándares de MLOps y plantillas de código, y establecí cómo trabaja el equipo con GitHub Copilot y Claude Code: mejor ingeniería de contexto y menor consumo de créditos de IA.</dd>
+          <dt>Resultados</dt>
+          <dd><ul class="results"><li>Cobertura de pruebas de 0% a 70%+ en 14 proyectos de ciencia de datos.</li><li>Dos personas que mentoré fueron contratadas como ML engineers junior.</li><li>Co-organizador de la Mesa de Arquitectura, un comité interno con su propio currículo de Python y patrones de diseño.</li></ul></dd>
+        </dl>
+        <ul class="chips "><li>Pytest</li><li>CI</li><li>Copilot</li><li>Claude Code</li><li>SOLID</li><li>DDD</li></ul>
+      </article>
+    </div>
+    </div>
+  </section>
+<section class="section" id="projects" aria-labelledby="projects-title">
+    <div class="wrap">
+    <header class="section-head">
+      <p class="label mono">## proyectos</p>
+      <h2 id="projects-title">Proyectos públicos</h2>
+      <p class="intro">Material de enseñanza, investigación, datos geográficos y hardware que no pude dejar pasar.</p>
+    </header>
+    <div class="filters" role="group" aria-label="Filtrar proyectos" hidden>
+      <button type="button" class="filter" data-filter="all" aria-pressed="true">Todos</button>
+      <button type="button" class="filter" data-filter="data" aria-pressed="false">Datos</button>
+      <button type="button" class="filter" data-filter="ml" aria-pressed="false">ML e investigación</button>
+      <button type="button" class="filter" data-filter="geo" aria-pressed="false">Geo</button>
+      <button type="button" class="filter" data-filter="hw" aria-pressed="false">Hardware</button>
+      <button type="button" class="filter" data-filter="web" aria-pressed="false">Web</button>
+    </div>
+    <div class="grid projects">
+      <article class="card project" data-tags="data">
+        <h3>Manual práctico de CKAN</h3>
+        <p>Manual práctico en cuatro partes para publicar datos abiertos con CKAN: instalación con Docker Compose, FileStore y DataStore, la API y un flujo completo de los datos al portal.</p>
+        <ul class="chips "><li>CKAN</li><li>Docker</li><li>Datos abiertos</li></ul>
+        <p class="note mono">// docker compose up &amp;&amp; ojalá</p>
+        <p class="links mono"><a href="https://github.com/AldaCL/ckan-manual" target="_blank" rel="noopener noreferrer">ckan-manual<span aria-hidden="true"> ↗</span></a></p>
+      </article>
+      <article class="card project" data-tags="data">
+        <h3>Guía de gobierno de datos</h3>
+        <p>Una política integrada de datos (calidad, clasificación, acceso) para una empresa de ejemplo, más un manual que la convierte en configuración reproducible de OpenMetadata: etiquetas, RBAC, pruebas de calidad y linaje.</p>
+        <ul class="chips "><li>Gobierno de datos</li><li>OpenMetadata</li><li>RBAC</li></ul>
+        <p class="note mono">// política como código, sin el drama</p>
+        <p class="links mono"><a href="https://github.com/AldaCL/GobiernoDatos" target="_blank" rel="noopener noreferrer">GobiernoDatos<span aria-hidden="true"> ↗</span></a></p>
+      </article>
+      <article class="card project" data-tags="data">
+        <h3>Guía de SQL con ejercicios</h3>
+        <p>De consultas básicas sobre un dataset de pedidos de clientes a índices, planes de consulta, permisos y respaldos en PostgreSQL.</p>
+        <ul class="chips "><li>SQL</li><li>PostgreSQL</li></ul>
+        <p class="note mono">// SELECT * FROM paciencia;</p>
+        <p class="links mono"><a href="https://github.com/AldaCL/sql-guide" target="_blank" rel="noopener noreferrer">sql-guide<span aria-hidden="true"> ↗</span></a></p>
+      </article>
+      <article class="card project" data-tags="ml">
+        <h3>Interpretabilidad con KAN</h3>
+        <p>Mi investigación de maestría en el IPN sobre Redes Kolmogorov-Arnold y la interpretabilidad de redes neuronales. Tesis en curso; estos son los forks relacionados.</p>
+        <ul class="chips "><li>KAN</li><li>Interpretabilidad</li><li>Investigación</li></ul>
+        <p class="note mono">// interpretable, a diferencia de mis commits</p>
+        <p class="links mono"><a href="https://github.com/AldaCL/pykan" target="_blank" rel="noopener noreferrer">pykan (fork)<span aria-hidden="true"> ↗</span></a><a href="https://github.com/AldaCL/Convolutional-KANs" target="_blank" rel="noopener noreferrer">Convolutional-KANs (fork)<span aria-hidden="true"> ↗</span></a></p>
+      </article>
+      <article class="card project" data-tags="ml">
+        <h3>Predicción de interacciones entre fármacos</h3>
+        <p>Artículo de un curso de aprendizaje automático con grafos que reproduce DPDDI, un predictor profundo de interacciones entre fármacos. Escrito en LaTeX en el CIC-IPN.</p>
+        <ul class="chips "><li>ML en grafos</li><li>LaTeX</li></ul>
+        <p class="note mono">// revisión por pares, pero en notebook</p>
+        <p class="links mono"><a href="https://github.com/AldaCL/MLwG-TEXT" target="_blank" rel="noopener noreferrer">MLwG-TEXT<span aria-hidden="true"> ↗</span></a></p>
+      </article>
+      <article class="card project" data-tags="ml">
+        <h3>Optimización inspirada en humanos</h3>
+        <p>Implementación en Python del Social Algorithm probada con funciones de referencia, con análisis de convergencia y diversidad sobre ejecuciones repetidas.</p>
+        <ul class="chips "><li>Python</li><li>Optimización</li></ul>
+        <p class="note mono">// converge. eventualmente.</p>
+        <p class="links mono"><a href="https://github.com/AldaCL/human-inspired-optimization-algorithms" target="_blank" rel="noopener noreferrer">human-inspired-optimization-algorithms<span aria-hidden="true"> ↗</span></a></p>
+      </article>
+      <article class="card project" data-tags="ml">
+        <h3>Robots de caminata aleatoria</h3>
+        <p>Simulación y análisis de caminatas aleatorias con PyGame para un curso de series de tiempo en el CIC-IPN, hecho con un compañero.</p>
+        <ul class="chips "><li>Python</li><li>PyGame</li><li>Series de tiempo</li></ul>
+        <p class="note mono">// hecho con cafeína y prisa (lo dice el README)</p>
+        <p class="links mono"><a href="https://github.com/AldaCL/random-walker-cic" target="_blank" rel="noopener noreferrer">random-walker-cic<span aria-hidden="true"> ↗</span></a></p>
+      </article>
+      <article class="card project" data-tags="ml">
+        <h3>Notebooks de cursos</h3>
+        <p>Notebooks de reconocimiento de patrones y aprendizaje profundo de mis cursos de maestría: regresión logística, SVM, retropropagación y aprendizaje profundo en grafos.</p>
+        <ul class="chips "><li>Notebooks</li><li>Deep learning</li></ul>
+        <p class="note mono">// la pérdida baja, casi siempre</p>
+        <p class="links mono"><a href="https://github.com/AldaCL/PatterRecognition" target="_blank" rel="noopener noreferrer">PatterRecognition<span aria-hidden="true"> ↗</span></a><a href="https://github.com/AldaCL/Deep-Learning-Notes" target="_blank" rel="noopener noreferrer">Deep-Learning-Notes<span aria-hidden="true"> ↗</span></a></p>
+      </article>
+      <article class="card project" data-tags="geo">
+        <h3>Puntos en polígonos sobre un mapa de México</h3>
+        <p>Automatiza el conteo de puntos que caen dentro de polígonos con GeoPandas y los dibuja en un mapa de Bokeh. Hecho para analizar cobertura de radiodifusión.</p>
+        <ul class="chips "><li>GeoPandas</li><li>Bokeh</li><li>GIS</li></ul>
+        <p class="note mono">// por fin, un uso para tantos shapefiles</p>
+        <p class="links mono"><a href="https://github.com/AldaCL/broadcast-coverage-calc" target="_blank" rel="noopener noreferrer">broadcast-coverage-calc<span aria-hidden="true"> ↗</span></a></p>
+      </article>
+      <article class="card project" data-tags="hw">
+        <h3>Telemetría para CanSat</h3>
+        <p>Telemetría a bordo con Arduino, Xbee y un sensor GY-80, más una estación terrena en Python con OpenGL, pygame y Matplotlib.</p>
+        <ul class="chips "><li>Arduino</li><li>Xbee</li><li>Python</li></ul>
+        <p class="note mono">// mi primer deploy llegó al espacio (más o menos)</p>
+        <p class="links mono"><a href="https://github.com/AldaCL/CanSat" target="_blank" rel="noopener noreferrer">CanSat<span aria-hidden="true"> ↗</span></a></p>
+      </article>
+      <article class="card project" data-tags="web">
+        <h3>Abogabot: del requerimiento a la interfaz</h3>
+        <p>Una plantilla para llevar un requerimiento de software desde el documento de entendimiento hasta historias de usuario, diagramas de flujo, UML y diseño de interfaz, ilustrada con una plataforma de gestión de casos para un despacho de abogados.</p>
+        <ul class="chips "><li>Requerimientos</li><li>UML</li><li>UX</li></ul>
+        <p class="note mono">// objeción: el alcance crece</p>
+        <p class="links mono"><a href="https://github.com/AldaCL/Abogabot" target="_blank" rel="noopener noreferrer">Abogabot<span aria-hidden="true"> ↗</span></a></p>
+      </article>
+      <article class="card project" data-tags="web">
+        <h3>React Tetris</h3>
+        <p>Tetris en React, de 2019.</p>
+        <ul class="chips "><li>React</li><li>JavaScript</li></ul>
+        <p class="note mono">// game over</p>
+        <p class="links mono"><a href="https://github.com/AldaCL/react-tetris" target="_blank" rel="noopener noreferrer">react-tetris<span aria-hidden="true"> ↗</span></a></p>
+      </article>
+    </div>
+    </div>
+  </section>
+<section class="section" id="keyboards" aria-labelledby="keyboards-title">
+    <div class="wrap">
+    <header class="section-head">
+      <p class="label mono">## teclados</p>
+      <h2 id="keyboards-title">Nerd de teclados mecánicos</h2>
+      <p class="intro">Diagnóstico: crónico. Tratamiento: un teclado más.</p>
+    </header>
+    <div class="card kb">
+      <div class="kb-text">
+        <p>Cuando no estoy moviendo datos, probablemente estoy moviendo switches. Traduje al español el README, la lista de materiales y la guía de ensamble de Lumberjack, para que más gente pueda soldar su propia placa.</p>
+        <p>Lumberjack es una PCB ortolineal 60% de componentes through-hole diseñada por Paul James. Todo through-hole, sin soldadura SMD, y funciona en cases 60% estándar de tipo tray mount. El diseño es suyo; la versión en español es mía.</p>
+        <ul class="chips "><li>Through-hole</li><li>Ortolineal 60%</li><li>KiCad</li><li>Switches MX</li></ul>
+        <p class="links mono"><a href="https://github.com/AldaCL/lumberjack-keyboard" target="_blank" rel="noopener noreferrer">Traducción al español (mi fork)<span aria-hidden="true"> ↗</span></a><a href="https://github.com/peej/lumberjack-keyboard" target="_blank" rel="noopener noreferrer">Original de Paul James<span aria-hidden="true"> ↗</span></a></p>
+        <p class="note mono">// En mi GitHub también hay un fork del firmware QMK, porque claro que sí.</p>
+      </div>
+      <div class="kb-keys" aria-hidden="true">
+        <div class="keycaps"><span class="keycap" data-key="L">L</span><span class="keycap" data-key="U">U</span><span class="keycap" data-key="M">M</span><span class="keycap" data-key="B">B</span><span class="keycap" data-key="E">E</span><span class="keycap" data-key="R">R</span><span class="keycap" data-key="J">J</span><span class="keycap" data-key="A">A</span><span class="keycap" data-key="C">C</span><span class="keycap" data-key="K">K</span></div>
+        <p class="hint mono">Pruébalo: escríbelo</p>
+      </div>
+    </div>
+    </div>
+  </section>
+<section class="section" id="teaching" aria-labelledby="teaching-title">
+    <div class="wrap">
+    <header class="section-head">
+      <p class="label mono">## enseñanza</p>
+      <h2 id="teaching-title">Enseñanza y comunidad</h2>
+      <p class="intro">Me gusta cuando los pipelines de los demás dejan de romperse.</p>
+    </header>
+    <div class="grid three">
+      <article class="card"><h3>Instructor privado</h3><p>Bases de datos, gobierno de datos y Python para instituciones de gobierno. Los materiales de CKAN, SQL y gobierno de datos de arriba son la versión abierta de ese trabajo.</p></article>
+      <article class="card"><h3>Mesa de Arquitectura</h3><p>Co-organizador de un comité interno de arquitectura. Escribí un currículo de introducción a Python (Clean Code, POO, SOLID, patrones de diseño) y una ruta de 16 temas que cubre DDD, arquitectura hexagonal, mensajería, RAG, orquestación multiagente y evaluación de LLM.</p></article>
+      <article class="card"><h3>Mentoría</h3><p>Code reviews, pair programming y sesiones de mentoría para ingenieros junior y científicos de datos. Dos personas que mentoré fueron contratadas como ML engineers junior.</p></article>
+    </div>
+    </div>
+  </section>
+<section class="section" id="stack" aria-labelledby="stack-title">
+    <div class="wrap">
+    <header class="section-head">
+      <p class="label mono">## stack</p>
+      <h2 id="stack-title">Herramientas a las que recurro</h2>
+    </header>
+    <div class="stack">
+      <div class="stack-row"><h3 class="mono">Lenguajes</h3><ul class="chips "><li>Python</li><li>SQL</li><li>PySpark</li><li>Java</li><li>R</li><li>Shell</li></ul></div>
+      <div class="stack-row"><h3 class="mono">Datos</h3><ul class="chips "><li>Apache Beam</li><li>Airflow</li><li>Databricks</li><li>Spark</li><li>BigQuery</li><li>PostgreSQL / PostGIS</li><li>Snowflake</li></ul></div>
+      <div class="stack-row"><h3 class="mono">Nube</h3><ul class="chips "><li>GCP</li><li>Azure</li><li>Terraform</li><li>Docker</li><li>Kubernetes</li><li>CI/CD</li></ul></div>
+      <div class="stack-row"><h3 class="mono">ML e IA</h3><ul class="chips "><li>MLflow</li><li>XGBoost</li><li>Prophet</li><li>Azure OpenAI</li><li>Gemini</li><li>MCP</li><li>GitHub Copilot</li><li>Claude Code</li></ul></div>
+      <div class="stack-row"><h3 class="mono">Backend</h3><ul class="chips "><li>FastAPI</li><li>Spring Boot</li><li>Flask</li><li>Django</li><li>Looker</li></ul></div>
+      <div class="stack-row"><h3 class="mono">Certificaciones</h3><ul class="chips certs"><li>Google Cloud Associate Cloud Engineer</li><li>Google Gemini Certified Partner Specialist: Gemini Enterprise Agent Development</li></ul></div>
+    </div>
+    </div>
+  </section>
+<section class="section contact" id="contact" aria-labelledby="contact-title">
+    <div class="wrap">
+    <header class="section-head">
+      <p class="label mono">## contacto</p>
+      <h2 id="contact-title">Hablemos</h2>
+      <p class="intro">Plataformas de datos, MLOps o teclados mecánicos. Contesto los tres.</p>
+    </header>
+    <ul class="contact-list mono">
+      <li><span>Correo</span><a href="mailto:aldair.alda27@gmail.com">aldair.alda27@gmail.com</a></li>
+      <li><span>GitHub</span><a href="https://github.com/AldaCL" target="_blank" rel="noopener noreferrer">github.com/AldaCL</a></li>
+      <li><span>LinkedIn</span><a href="https://linkedin.com/in/aldacortes" target="_blank" rel="noopener noreferrer">linkedin.com/in/aldacortes</a></li>
+    </ul>
+    </div>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <p>Hecho a mano con HTML, CSS y cero frameworks. Sin deploys en viernes.</p>
+    <p class="mono">© 2026 Aldair Cortés · Última actualización: noviembre de 2026</p>
+  </div>
+</footer>
+<script src="../assets/main.js" defer></script>
+</body>
+</html>
