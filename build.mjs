@@ -1,26 +1,9 @@
 // Zero-dependency static site generator.
 //   node build.mjs
 // Reads content.mjs and writes: index.html (EN), es/index.html (ES), 404.html, sitemap.xml, robots.txt
-//
-// Options (environment variables):
-//   DESIGN=a|b|c   visual design (a = clean terminal, default; b = mission control; c = keycaps and PCB)
-//   OUT=dir        output directory (default: current directory; assets are copied when it differs)
-//   PREVIEW=1      add a small A/B/C switcher pill, used only for design previews
-import { mkdirSync, writeFileSync, cpSync } from 'node:fs';
-import { dirname, join } from 'node:path';
+import { mkdirSync, writeFileSync } from 'node:fs';
 import { site, content } from './content.mjs';
 import { heroArt } from './art.mjs';
-
-const DESIGN = (process.env.DESIGN || 'a').toLowerCase();
-if (!['a', 'b', 'c'].includes(DESIGN)) throw new Error('DESIGN must be a, b or c');
-const OUT = process.env.OUT || '.';
-const PREVIEW = process.env.PREVIEW === '1';
-const out = (path, data) => {
-  const full = join(OUT, path);
-  mkdirSync(dirname(full), { recursive: true });
-  writeFileSync(full, data);
-};
-const designCss = (prefix) => (DESIGN === 'a' ? '' : `\n<link rel="stylesheet" href="${prefix}design-${DESIGN}.css">`);
 
 const esc = (s) =>
   String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
@@ -71,7 +54,7 @@ function head(key) {
 <meta name="color-scheme" content="dark light">
 <link rel="icon" href="${r.assets}favicon.svg" type="image/svg+xml">
 <script>(function(){try{var t=localStorage.getItem('theme');if(!t){t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';}document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
-<link rel="stylesheet" href="${r.assets}styles.css">${designCss(r.assets)}
+<link rel="stylesheet" href="${r.assets}styles.css">
 <script type="application/ld+json">${jsonLd(c)}</script>
 </head>`;
 }
@@ -117,7 +100,7 @@ function hero(key) {
         <p class="status mono"><span class="dot" aria-hidden="true"></span>${esc(h.status)}</p>
       </div>
       <div class="hero-art">
-        ${heroArt(DESIGN, c.ui)}
+        ${heroArt(c.ui)}
       </div>
     </div>
     <div class="stats">
@@ -214,6 +197,18 @@ function keyboards(key) {
         <p class="hint mono">${esc(k.keycapsLabel)}</p>
       </div>
     </div>
+    <div class="card collection" data-egg="${esc(k.egg)}">
+      <h3 class="mono"><span class="p-cmd">$</span> ${esc(k.collection.cmd)}</h3>
+      <ul class="kb-list">
+        ${k.collection.items
+          .map(
+            (i) =>
+              `<li><span class="kb-name">${i.href ? `<a href="${esc(i.href)}" target="_blank" rel="noopener noreferrer">${esc(i.name)}<span aria-hidden="true"> ↗</span></a>` : esc(i.name)}</span><span class="kb-note">${esc(i.note)}</span></li>`
+          )
+          .join('\n        ')}
+      </ul>
+      <p class="note mono">// ${esc(k.collection.verdict)}</p>
+    </div>
     </div>
   </section>`;
 }
@@ -287,13 +282,6 @@ function contact(key) {
   </section>`;
 }
 
-function previewPill(key) {
-  if (!PREVIEW) return '';
-  const up = key === 'es' ? '../../' : '../';
-  const link = (d) => `<a href="${up}${d}/${key === 'es' ? 'es/' : ''}index.html"${d === DESIGN ? ' aria-current="page"' : ''}>${d.toUpperCase()}</a>`;
-  return `<nav class="preview-pill mono" aria-label="Design preview"><span>design</span>${link('a')}${link('b')}${link('c')}<a class="pp-home" href="${up}index.html">all</a></nav>\n`;
-}
-
 function footer(key) {
   const c = content[key];
   const fmt = new Intl.DateTimeFormat(c.htmlLang === 'es' ? 'es-MX' : 'en-US', { month: 'long', year: 'numeric', timeZone: 'UTC' }).format(today);
@@ -304,7 +292,7 @@ function footer(key) {
     <p class="mono">© ${today.getUTCFullYear()} ${esc(site.name)} · ${esc(c.footer.updated)}: ${esc(fmt)}</p>
   </div>
 </footer>
-${previewPill(key)}<script src="${r.assets}main.js" defer></script>
+<script src="${r.assets}main.js" defer></script>
 </body>
 </html>`;
 }
@@ -312,7 +300,7 @@ ${previewPill(key)}<script src="${r.assets}main.js" defer></script>
 function page(key) {
   return [
     head(key),
-    `<body data-design="${DESIGN}">`,
+    `<body>`,
     header(key),
     `<main id="main">`,
     hero(key),
@@ -346,9 +334,9 @@ function notFound() {
 <meta name="robots" content="noindex">
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <script>(function(){try{var t=localStorage.getItem('theme');if(!t){t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';}document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
-<link rel="stylesheet" href="/assets/styles.css">${designCss('/assets/')}
+<link rel="stylesheet" href="/assets/styles.css">
 </head>
-<body class="page-404" data-design="${DESIGN}">
+<body class="page-404">
   <main class="wrap">
     ${block(en)}
     <hr class="sep">
@@ -358,11 +346,11 @@ function notFound() {
 </html>`;
 }
 
-if (OUT !== '.') cpSync('assets', join(OUT, 'assets'), { recursive: true });
-out('index.html', page('en'));
-out('es/index.html', page('es'));
-out('404.html', notFound());
-out(
+mkdirSync('es', { recursive: true });
+writeFileSync('index.html', page('en'));
+writeFileSync('es/index.html', page('es'));
+writeFileSync('404.html', notFound());
+writeFileSync(
   'sitemap.xml',
   `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
@@ -371,5 +359,5 @@ out(
 </urlset>
 `
 );
-out('robots.txt', `User-agent: *\nAllow: /\nSitemap: ${site.url}/sitemap.xml\n`);
-console.log(`built design ${DESIGN.toUpperCase()} -> ${OUT}`);
+writeFileSync('robots.txt', `User-agent: *\nAllow: /\nSitemap: ${site.url}/sitemap.xml\n`);
+console.log('built: index.html, es/index.html, 404.html, sitemap.xml, robots.txt');
